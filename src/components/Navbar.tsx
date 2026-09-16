@@ -19,6 +19,8 @@ import {
 import { useTheme } from "./ThemeProvider";
 import { EmbedModal } from "./EmbedModal";
 
+import { InstallAppButton } from "./InstallAppButton";
+
 export const Navbar: React.FC = () => {
   const pathname = usePathname();
   const { resolvedTheme, setTheme } = useTheme();
@@ -100,14 +102,17 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Desktop Right Actions */}
-          <div className="hidden items-center gap-3 md:flex">
+          <div className="hidden items-center gap-2.5 md:flex">
+            {/* Install App Button */}
+            <InstallAppButton variant="primary" />
+
             {/* Embed Trigger Button */}
             <button
               onClick={() => setIsEmbedOpen(true)}
               className="flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 shadow-sm transition hover:border-blue-400 hover:text-blue-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-blue-500 dark:hover:text-blue-400"
             >
               <Code2 className="h-4 w-4 text-blue-500" />
-              <span>&lt;/&gt; Embed on Your Site</span>
+              <span>&lt;/&gt; Embed</span>
             </button>
 
             {/* Theme Toggle */}

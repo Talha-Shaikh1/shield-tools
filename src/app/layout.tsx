@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     "privacy tools",
   ],
   authors: [{ name: "ShieldTools Team", url: "https://shieldtools.io" }],
+  manifest: "/manifest.json",
   robots: {
     index: true,
     follow: true,

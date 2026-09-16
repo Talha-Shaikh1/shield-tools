@@ -1,0 +1,23 @@
+{
+  "name": "ShieldTools & Content Playbook",
+  "short_name": "ShieldTools",
+  "description": "Zero-server privacy utilities and 30-day LinkedIn Content Playbook",
+  "start_url": "/playbook",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/globe.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/globe.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

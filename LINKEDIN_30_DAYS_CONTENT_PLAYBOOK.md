@@ -6,8 +6,44 @@
 > **Rules for Publishing:**
 > 1. **No External Links in the Post Body:** Always put links (demo links, docs, website, or GitHub) in the **First Comment** to avoid LinkedIn algorithm reach suppression.
 > 2. **Formatting:** Preserve the blank lines and short paragraphs. LinkedIn mobile readers bounce on dense walls of text.
-> 3. **Visual Prompts:** Use the included Midjourney/DALL-E prompts, Canva templates, or Mermaid code diagrams for maximum visual impact.
-> 4. **Best Posting Times (PKT / UTC+5):** 8:30 AM – 9:30 AM (Commute/Office Start) or 6:30 PM – 7:30 PM (Evening Wind-Down), Tuesday through Thursday have highest B2B engagement.
+> 3. **Best Posting Times (PKT / UTC+5):** 8:30 AM – 9:30 AM (Commute/Office Start) or 6:30 PM – 7:30 PM (Evening Wind-Down). Tuesday through Thursday have highest B2B engagement.
+
+---
+
+# 🎨 Master Visual Identity & Logo Reference Guide
+
+### 1. Brand Color System
+* **Brand Primary Green:** Emerald `#10B981` (RGB: 16, 185, 129)
+* **Background Obsidian:** Deep Charcoal / Obsidian `#090D16` / `#0F172A`
+* **Card Surface (Glassmorphism):** `#1E293B` at 70% opacity with a 1px white border (`rgba(255,255,255,0.08)`)
+* **Text Main:** `#F8FAFC` (Pure/Off-White)
+* **Text Secondary:** `#94A3B8` (Cool Grey)
+* **Accent Warning / Red:** `#EF4444` (Coral Red for "Old Way / Abandoned" metrics)
+
+### 2. Official Logo & Mascot Assets
+Your project already contains official transparent branding files:
+* **Horizontal Brand Logo:** [`botaura-logo.png`](file:///c:/Work/botaura-claude-kiro/frontend/public/images/botaura-logo.png) (Full logo with wordmark)
+* **3D Robot Mascot / Avatar:** [`botaura-robot.png`](file:///c:/Work/botaura-claude-kiro/frontend/public/images/botaura-robot.png) (3D friendly AI bot with emerald eyes & headset)
+* **Cutout Mascot:** [`robot-botaura-removebg-preview.png`](file:///c:/Work/botaura-claude-kiro/frontend/public/images/robot-botaura-removebg-preview.png)
+
+### 3. How to Feed Reference Images & Logo into AI Image Generators
+
+#### A. In this Chat (Antigravity Assistant):
+Simply tell me: *"Day [X] ki image generate kar do"* — I will automatically attach `frontend/public/images/botaura-logo.png` as an `ImagePaths` reference so the logo and brand aesthetic are matched directly!
+
+#### B. In Midjourney v6:
+Upload `botaura-logo.png` or `botaura-robot.png` to Discord, copy its public link, and use it at the end of the prompt:
+```
+[Prompt Text] <URL_TO_BOTAURA_LOGO.PNG> --sref <URL_TO_LOGO> --sw 80 --ar 16:9 --v 6.0 --style raw
+```
+*(Where `--sref` locks the color palette and design style, and `--sw 80` applies 80% style weight).*
+
+#### C. In Ideogram 2.0 (Best for Typography & UI Text):
+Upload `botaura-logo.png` as an **Image Weight Reference (0.5 - 0.6)** and select the **"Design"** or **"3D"** style preset. Ideogram renders legible English text inside graphics better than any other generator.
+
+#### D. The Professional 2-Step Canva Workflow (Recommended for 100% Crisp Branding):
+1. Use the AI Prompt to generate the clean, ultra-high-definition 3D background mockup (laptop, floating phone, data cards) with an empty top-left or screen header.
+2. In Canva: Drop your clean PNG [`botaura-logo.png`](file:///c:/Work/botaura-claude-kiro/frontend/public/images/botaura-logo.png) in the top-left corner and overlay crisp vector text. This guarantees zero AI spelling mistakes and 100% brand perfection.
 
 ---
 
@@ -59,11 +95,12 @@ Until you design your technology stack around the conversation, you aren’t doi
 Are you seeing more conversions happen on your website cart or your WhatsApp chat?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Single Image (Comparison Graphic)
-* **Design / Canva Text:** Split graphic. Left: "West E-Commerce (Web Cart + Credit Card)" with a sad checkout drop-off chart. Right: "South Asia / MENA (WhatsApp Chat + COD)" with high conversion messages.
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *Minimalist modern 3D illustration, split screen concept. Left side shows an empty abandoned digital shopping cart on a desktop monitor with cool grey tones. Right side shows a glowing smartphone displaying active green WhatsApp chat bubbles and parcel delivery box with warm emerald green accents (#10b981), sleek studio lighting, clean tech infographic style, 8k resolution --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** High-end Split-Screen Comparison Graphic (Desktop Cart vs. WhatsApp COD).
+* **Reference Asset (Optional):** None (Keep generic pre-launch).
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A photorealistic modern 3D split-screen render on a dark obsidian background (#090D16). On the left side, representing Western e-commerce: a sleek desktop monitor with a dim grey abandoned cart screen, a red glowing downward trend line, and a floating translucent badge reading 'LOW CONVERSION: 2.1%'. On the right side, representing Emerging Markets: a floating modern smartphone glowing with vibrant emerald green (#10B981) light, showing an active WhatsApp chat interface with colorful product card previews and a 3D cardboard parcel labeled 'CASH ON DELIVERY' with a rising green arrow and badge reading 'ENGAGEMENT: 68%'. Minimalist tech aesthetics, ray-traced reflections, Octane render style, 8k resolution --ar 16:9 --style raw`
+* **Canva Overlay Guide:** Place title on top center: "E-COMMERCE EVOLUTION: WESTERN vs EMERGING MARKETS".
 * **First Comment Copy:**
   > *"The shift towards conversational commerce is happening 3x faster in emerging markets than developed ones. What percentage of your sales inquiries currently come via WhatsApp/DM?"*
 
@@ -108,11 +145,11 @@ You have a response latency problem.
 How quickly does your team respond to after-hours WhatsApp inquiries?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Line Chart / Data Infographic
-* **Design / Canva Text:** "Conversion Rate vs. Response Time on WhatsApp". Curve drops off steeply from 0s (38%) to 60m (<5%).
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A sleek dark-mode technology dashboard UI showing an analytical metric card. A bright neon emerald green line graph plummeting downward. Key label reads: 'Conversion Rate vs WhatsApp Response Latency'. High-end SaaS interface aesthetic, glassmorphism, clean typography, 8k resolution --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** High-Tech Analytical Metric Dashboard & Line Graph.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A sleek dark-mode SaaS analytics interface card floating in 3D isometric view. A dramatic, glowing neon-emerald (#10B981) line graph plunging sharply from 38% at '0s' down to 5% at '30m+'. Translucent glassmorphism panels, holographic axis labels reading 'WhatsApp Response Latency (Minutes)' on X-axis and 'Conversion-to-Order Rate (%)' on Y-axis. Dark slate background (#0F172A), sharp ambient occlusion, volumetric neon glow, cinematic lighting, 8k resolution --ar 16:9`
+* **Canva Overlay Guide:** Add bold text header: "THE 42-MINUTE CLIFF: Why Slow WhatsApp Replies Kill 84% of Conversions".
 * **First Comment Copy:**
   > *"Every 5-minute delay after the initial click cuts your conversion probability in half. Automating the first 60 seconds is the single highest-ROI lever in e-commerce."*
 
@@ -155,11 +192,11 @@ Rule-based bots are dead. Context-aware conversational AI is here.
 Have you ever tried using a button-based bot on WhatsApp and given up?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Screenshot Carousel or Side-by-Side Meme/Infographic
-* **Design / Canva Text:** Left: Rigid Robot failing with "Please press 1". Right: Modern AI replying in natural Roman Urdu with product photo card.
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A split-screen illustration comparing two chat bubbles. The left chat bubble is glitchy red with robotic rigid text 'Invalid Command'. The right chat bubble is a sleek emerald green interface with friendly natural conversational text and an elegant product card preview. Minimalist UI design, dark background, hyper-realistic, 4k --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Side-by-Side Conversational UI Mockup (Rigid Robot vs Contextual AI).
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A clean side-by-side UI mockup on dark graphite background. Left side shows a glitching grey chat interface with a clunky red robot avatar displaying a failed message: 'Error: Invalid Command. Press 1, 2 or 3'. Right side shows a polished smartphone display with an emerald-green verified badge, displaying a fluid conversational chat bubble in natural Roman Urdu and an elegant product image card with price and stock status. Soft rim lighting, high-end Apple product photography aesthetic, 8k --ar 16:9`
+* **Canva Overlay Guide:** Top banner: "DECISION TREE BOTS vs CONTEXTUAL AI". Red tag on left: "Rigid & Broken". Green tag on right: "Autonomous & Empathetic".
 * **First Comment Copy:**
   > *"Languages with non-standardized phonetic spelling (like Roman Urdu or Arabizi) are the ultimate stress test for NLP systems. More on how we solved this later this week."*
 
@@ -202,11 +239,11 @@ Over 60% of this loss can be prevented BEFORE the parcel leaves the warehouse wi
 What is your current RTO percentage, and how are you tackling it?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Infographic Breakdown
-* **Design / Canva Text:** Graphic titled "The Anatomy of an RTO Loss". Illustrating courier fee + reverse fee + packaging waste + locked inventory.
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A realistic, cinematic composition of a returned e-commerce cardboard parcel sitting on a warehouse concrete floor with a red return stamp 'RETURN TO ORIGIN'. Soft dramatic lighting, high contrast, depth of field, 8k resolution --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Cinematic Warehouse Logistics & Financial Drain Visual.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A dramatic, cinematic studio photograph of an e-commerce shipping package on an industrial concrete warehouse floor. The package has a distressed courier label and a bold red rubber-stamp imprint reading 'RETURN TO ORIGIN - REFUSED AT DOORSTEP'. Surrounding the package are floating translucent holographic expense tags with red numbers: 'Forward Fee: Rs 250', 'Reverse Fee: Rs 200', 'Dead Inventory Locked'. Moody low-key lighting, soft orange and red reflections, depth of field, 8k --ar 16:9`
+* **Canva Overlay Guide:** Big bold headline: "THE ANATOMY OF AN RTO LOSS: How 250 Returns Cost Over Rs. 125,000/Month".
 * **First Comment Copy:**
   > *"Courier companies still charge you shipping even if the customer refuses the parcel. Pre-dispatch verification is not optional—it's survival."*
 
@@ -248,13 +285,11 @@ Completed in 15 seconds.
 How do you currently capture customer addresses on WhatsApp?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Flow Diagram / UI Comparison
-* **Design / Canva Text:** 
-  "Old Way: 6 Steps, 45 Seconds, 70% Drop-off (Link -> Browser -> Form -> Load)" vs 
-  "New Way: 1 Step, 15 Seconds, 85% Completion (Native WhatsApp Flow)".
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *Clean vector UI comparison diagram on dark grey background. Left path shows red broken arrows passing through multiple loading browser screens. Right path shows a single smooth emerald green arrow seamlessly completing an order inside a mobile chat interface. Modern, sleek tech aesthetic --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** UX Flow Breakdown (Friction vs. Flow).
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A high-tech UX flow comparison diagram on dark grey slate background. Top path shows a frustrated user journey: a red dotted arrow meandering through 5 slow loading browser windows, form error badges, and a red drop-off badge '-70% Drop'. Bottom path shows a frictionless journey: a bright emerald green (#10B981) direct arrow showing 1 tap on a native sliding form inside WhatsApp and an instant green checkmark '+84% Completed'. High aesthetic vector-3D hybrid style, clean UI icons, 8k resolution --ar 16:9`
+* **Canva Overlay Guide:** Top title: "THE DEATH OF THE CHECKOUT LINK: External Web Redirect vs. Native In-Chat Flows".
 * **First Comment Copy:**
   > *"Friction is the enemy of impulse buying. The closer the checkout is to the chat, the higher the conversion rate."*
 
@@ -294,11 +329,11 @@ A smart autonomous sales engine should:
 Are your media buyers actively leveraging the 72-hour window?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Educational Graphic
-* **Design / Canva Text:** "The 72-Hour Free CTWA Funnel". Step 1: Ad Click -> Step 2: Instant AI Greeting (0s) -> Step 3: Interactive Flow -> Step 4: 24h Follow-up ($0 Meta Fee).
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *High-tech graphic design showing an illuminated 72-hour digital timer floating above a smartphone screen with the Meta and WhatsApp icons connected by glowing fiber optic data streams. Emerald green and dark obsidian palette, cinematic lighting --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Futuristic Advertising Funnel & Timer Graphic.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A conceptual 3D graphic showing a glowing holographic digital stopwatch displaying '72:00:00' with neon emerald green digits. Below the timer, glowing optical data cables connect an Instagram ad creative tile directly to a WhatsApp chat bubble showing free-form messages and an 'Order Confirmed - $0 Meta Fees' gold seal. Dark obsidian space, volumetric emerald lighting, sophisticated fintech aesthetic, 8k --ar 16:9`
+* **Canva Overlay Guide:** Headline: "THE META 72-HOUR FREE WINDOW: How Media Buyers Scale CTWA Ads with Zero Message Fees".
 * **First Comment Copy:**
   > *"When you combine free Meta conversation fees with autonomous instant sales closing, your effective customer acquisition cost (CAC) drops by 30-40%."*
 
@@ -333,11 +368,11 @@ Free your human team to do high-leverage work. Automate the repetitive 80%.
 How big is your customer support team right now?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Text Graphic or Meme
-* **Design / Canva Text:** Bar chart showing: "What agents spend 80% of their day doing: (Where is my order? / Price? / Fabric?). What they should be doing: High-value sales & VIP support."
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *An abstract visual metaphor showing a glowing AI core handling thousands of fast digital data streams seamlessly, while human figures collaborate on high-level strategic tasks in the background. Modern minimalist tech office aesthetic, emerald green and slate tones --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Conceptual 3D Metaphor (Human Overload vs AI Efficiency).
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `An elegant 3D isometric conceptual render. In the background, a chaotic customer support desk covered in sticky notes, ringing phones, and coffee mugs under harsh lighting. In the foreground, an ultra-modern glowing glass cube server emitting tranquil emerald green light beams, effortlessly organizing thousands of glowing customer messages into neat, confirmed order parcels. Minimalist architectural aesthetic, dark slate textures, 8k --ar 16:9`
+* **Canva Overlay Guide:** Top title: "THE LINEAR PAYROLL TRAP: Why Hiring More Human Agents Won't Scale Your Store".
 * **First Comment Copy:**
   > *"Automation doesn't replace great people; it eliminates robotic, soul-crushing repetitive tasks so your best people can focus on customer delight."*
 
@@ -383,22 +418,11 @@ Separate the concerns. Protect the latency.
 What does your favorite production AI stack look like?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Clean System Architecture Diagram
-* **Design / Canva Text:** Architecture Diagram: [Shopify/WooCommerce] + [Meta Webhook] → [Next.js BFF & FastAPI Worker] → [pgvector DB + LLM Engine] → [WhatsApp User].
-* **Mermaid Diagram (for LinkedIn Carousel slide or export):**
-```mermaid
-graph TD
-    A[WhatsApp User] -->|Inbound Message| B(Meta Cloud API)
-    B -->|Webhook| C[FastAPI Gateway]
-    C -->|Embed Query| D[(Postgres + pgvector)]
-    D -->|Product Context| E[Prompt Builder & LLM]
-    E -->|Structured Output| C
-    C -->|Send Response| B
-    B -->|Interactive Card| A
-    F[Shopify / WooCommerce] <-->|Webhook Sync| G[Next.js BFF Layer]
-    G <-->|Shared DB| D
-```
+#### Visual Specification & AI Prompt:
+* **Visual Type:** High-End System Architecture Blueprint (Dark Theme).
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A clean, professional technical architecture diagram rendered in dark mode with luminous circuit pathways. Three primary structural blocks: 'Next.js Edge BFF', 'FastAPI Async AI Gateway', and 'PostgreSQL + pgvector'. Glowing emerald neon lines (#10B981) connect the blocks with label badges: 'Async Webhook Ingestion', '384-dim Embeddings', 'Origin-Checked postMessage'. Developer schematic style, sharp vector lines, dark obsidian backdrop, 8k resolution --ar 16:9`
+* **Canva Overlay Guide:** Title: "PRODUCTION SYSTEM ARCHITECTURE: Dual-Layer Ingestion & pgvector RAG".
 * **First Comment Copy:**
   > *"Decoupling the ingestion webhook from the LLM execution queue is essential to avoid Meta's 5-second webhook timeout. Always acknowledge first, process asynchronously."*
 
@@ -437,11 +461,11 @@ Optimize every millisecond.
 What dimension size are you running in your production vector databases?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Comparison Infographic
-* **Design / Canva Text:** "384-dim vs 1536-dim in E-commerce RAG". Columns: RAM usage (75% less), Search Latency (20ms vs 85ms), Accuracy for Product Retrieval (Identical).
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A clean conceptual representation of vector mathematics in space. Glowing emerald points connected by faint geometric lines in a 3D coordinate system, representing high-speed data clustering, futuristic dark tech background, hyper-detailed --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** 3D Vector Space & Benchmark Comparison Graphic.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `An abstract 3D mathematical visualization of vector embeddings in space. A dense cluster of glowing emerald geometric points in a high-speed vector manifold. Below, a clean benchmark comparison card: '384-dim: 22ms latency / 75% less RAM' versus '1536-dim: 94ms latency / 4x memory footprint'. Sophisticated dark cybernetic aesthetic, neon emerald highlights, fine depth of field, 8k --ar 16:9`
+* **Canva Overlay Guide:** Header: "VECTOR RETRIEVAL BENCHMARKS: Why 384-dim Beats 1536-dim for E-Commerce RAG".
 * **First Comment Copy:**
   > *"We pair 384-dim semantic embeddings with PostgreSQL full-text search (BM25) for hybrid search. If a user searches an exact SKU, keyword search wins; if they describe an occasion, vector search wins."*
 
@@ -485,11 +509,11 @@ Your software must speak the language of the bazaar, not the language of a textb
 How do you handle multi-dialect inputs in your applications?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Flow Diagram of the NLP Pipeline
-* **Design / Canva Text:** Diagram showing: [Customer Input: "chahiye"] → [Phonetic Normalizer] → [Vector Search] → [Polite Roman Urdu Generation].
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A sleek infographic illustrating language translation architecture. Input words in diverse phonetic scripts transforming through a glowing prism of emerald light into structured binary data, modern SaaS interface style --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Linguistic NLP Pipeline Architecture Diagram.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A clean infographic flowchart on a dark slate background. Three connected nodes: Node 1 shows unstructured slang words ('kuch kam hoga bhai?', 'discont?'). Node 2 shows a central glowing prism processing phonetic normalization. Node 3 outputs a structured canonical vector query and a polite, natural response in Roman Urdu with an emerald checkmark. Minimalist UI icons, elegant typography, 8k resolution --ar 16:9`
+* **Canva Overlay Guide:** Title: "THE ROMAN URDU NLP PIPELINE: From Colloquial Slang to Semantic Retrieval".
 * **First Comment Copy:**
   > *"Never force customers to switch languages. If a customer types in Roman Urdu, reply in Roman Urdu. If they switch to English, seamlessly switch with them."*
 
@@ -531,13 +555,13 @@ This single piece of technology doubles mobile checkout conversion rates.
 Have you built anything with WhatsApp Flows yet?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Split Screenshot / UI Diagram
-* **Design / Canva Text:** Side-by-side: Code snippet of Flow JSON on the left; the gorgeous native sliding form inside WhatsApp on the right.
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *High-fidelity product mockup of a high-end smartphone displaying an interactive WhatsApp Flow checkout screen with an address form and green confirm button, resting beside a laptop showing sleek dark-mode JSON code editor. 8k, cinematic studio lighting --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** High-Fidelity Mobile App & JSON Schema Mockup.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A photorealistic product mockup featuring a high-end smartphone angled in 3D. The smartphone screen displays a native WhatsApp Flow modal with an address input, city dropdown ('Karachi', 'Lahore', 'Islamabad'), and an emerald green button 'Confirm Order (COD)'. Beside the smartphone, floating translucent code cards display clean JSON schema code with syntax highlighting. Studio lighting, dark reflective desk, Apple developer aesthetic, 8k --ar 16:9`
+* **Canva Overlay Guide:** Headline: "INSIDE META WHATSAPP FLOWS v3.1: 1-Tap In-App Checkout Engineering".
 * **First Comment Copy:**
-  > *"The secret to high-converting Flows is keeping the form to under 4 fields. Name, Phone, City dropdown, and Street Address. Every extra field drops conversion by 12%."*
+  > *"The secret to high-converting Flows is keeping the form to under 4 fields: Name, Phone, City dropdown, and Street Address. Every extra field drops conversion by 12%."*
 
 ---
 
@@ -579,11 +603,11 @@ Never let an AI sell a ghost product.
 How do you handle webhook race conditions in your apps?
 ```
 
-#### Visual / Image Spec:
-* **Format:** System Architecture Flowchart
-* **Design / Canva Text:** Diagram showing Store Webhook → Redis Deduplication → Database Vector Update → Real-time JIT inventory check before checkout.
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A dynamic data visualization showing fast bidirectional data packets flowing between a glowing Shopify logo, WooCommerce logo, and an emerald central server database, dark theme, high technology aesthetic, 8k --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Synchronous Data Flow Diagram.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A clean system data pipeline diagram on dark obsidian background. Left side features the Shopify and WooCommerce logos connected by glowing neon conduits to an 'Idempotent Redis Buffer'. Data streams pass into a central PostgreSQL database and directly to a smartphone WhatsApp screen showing 'In Stock: 1 Unit Left (Verified JIT)'. Vibrant emerald green and cyan data lines, sharp geometric aesthetic, 8k --ar 16:9`
+* **Canva Overlay Guide:** Title: "REAL-TIME CATALOG SYNC: Eliminating Out-of-Stock Ghost Orders".
 * **First Comment Copy:**
   > *"Always verify stock JIT at the exact moment of order intent. Even a 5-minute cache window can lead to overselling during seasonal flash sales."*
 
@@ -625,11 +649,11 @@ Your customers' proprietary catalogs, customer orders, and internal documents mu
 How do you structure multi-tenancy in your vector stores?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Security Diagram / Infographic
-* **Design / Canva Text:** Graphic: "Zero-Leakage Multi-Tenant Isolation". Demonstrating separate encrypted partitions for each business under a unified pgvector engine.
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A 3D visualization of digital security partitions. Translucent emerald glass vaults separating glowing data streams, with an impenetrable cryptographic lock shield in the center, dark cyber aesthetic, 8k resolution --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Cyber-Security & Vault Architecture Render.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A 3D visualization of cryptographic data vault partitioning. Distinct translucent glass cubes labeled 'Tenant A' and 'Tenant B' separated by an impenetrable digital laser firewall. In the center, a glowing cryptographic lock emitting emerald green light with encrypted hash badges: 'HMAC SHA-256', 'Strict business_id Scoping'. Dark modern cybersecurity aesthetic, 8k --ar 16:9`
+* **Canva Overlay Guide:** Headline: "ZERO-LEAKAGE MULTI-TENANCY: Protecting Proprietary Catalogs in Vector RAG".
 * **First Comment Copy:**
   > *"Security in AI systems isn't just about API keys. It's about ensuring your retrieval layer cannot physically touch data from another tenant under any prompt injection attempt."*
 
@@ -670,11 +694,11 @@ Treat LLMs as conversational interfaces, NOT as your database of record.
 Have you ever seen a brand's chatbot hallucinate an embarrassing answer?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Code Snippet / Guardrail Diagram
-* **Design / Canva Text:** "How to Prevent AI Pricing Hallucinations: LLM handles conversation, deterministic database handles pricing and checkout math."
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A sleek visual showing a protective digital firewall or shield filtering out red chaotic text prompts and allowing only green verified factual data into a central glowing processor, clean modern tech aesthetic --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Deterministic vs Generative Guardrail Architecture.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A conceptual visual of an AI safety firewall. A red prompt trying to inject a fake price is blocked by a solid emerald green cryptographic shield. Behind the shield, a verified database icon securely passes the genuine product price directly to an invoice card with a verified seal. Dark slate background, high contrast, clean technical UI aesthetic --ar 16:9`
+* **Canva Overlay Guide:** Top title: "HALLUCINATION GUARDRAILS: Why LLMs Should Never Write Checkout Prices".
 * **First Comment Copy:**
   > *"Rule #1 of enterprise AI: Never let a generative model write prices directly to your payment gateway or order database."*
 
@@ -721,11 +745,11 @@ You give a gentle nudge only to the shoppers who need it to cross the finish lin
 Would you allow an AI to offer small discounts to close hesitant buyers on your store?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Interactive Chat Dialogue Graphic
-* **Design / Canva Text:** 3-step WhatsApp dialogue showing natural objection handling and a controlled 5% discount close.
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *Two smartphone mockups floating side-by-side on a dark background showing an elegant conversational WhatsApp exchange between an AI agent and a customer, subtle emerald green highlights, premium UI aesthetic --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Conversational Psychological Funnel.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `Two smartphones floating side-by-side on a dark reflective surface. The screen on the left shows an authentic WhatsApp dialogue where a customer asks for a discount and the AI gracefully handles the objection. The screen on the right shows a floating voucher badge 'SAVE5 - Applied' and an emerald green COD order confirmation card. Subtle emerald ambient lighting, Apple commercial studio aesthetic, 8k --ar 16:9`
+* **Canva Overlay Guide:** Headline: "THE PSYCHOLOGY OF IN-CHAT NEGOTIATION: Closing Hesitant Buyers Without Burning Margin".
 * **First Comment Copy:**
   > *"The key is threshold gating: discounts are only unlocked when intent is high but conversion is stalled. Never offer a discount on the first interaction."*
 
@@ -768,11 +792,11 @@ Verify on WhatsApp in 5 seconds. Protect your margins.
 Does your store manually call every COD order, or have you automated it?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Process Workflow Infographic
-* **Design / Canva Text:** Workflow: [New Order] → [WhatsApp Verification Buttons] → [Confirmed: Ship Parcel] / [Cancelled: Zero Courier Loss].
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A high-tech digital shield graphic hovering over a cardboard delivery package, glowing green verification checkmark, cybernetic data stream overlay, dark theme, studio lighting --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Automated Courier Protection Workflow.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `An isometric 3D render of an e-commerce logistics verification process. An incoming order parcel passes under a glowing emerald scanning arch. Verified orders receive a green shipping label 'CONFIRMED VIA WHATSAPP'. An unconfirmed parcel is diverted safely to a holding bay with a badge 'Cancelled - Saved Rs 450'. High-end 3D graphics, industrial clean room style, dark graphite background, 8k --ar 16:9`
+* **Canva Overlay Guide:** Top title: "THE ANTI-RTO SHIELD: How Automated Verification Protects D2C Margins".
 * **First Comment Copy:**
   > *"Brands that switch from manual phone calls to 1-tap WhatsApp verification report an 80% response rate within 15 minutes. Customers hate answering unknown calls; they love tapping a WhatsApp button."*
 
@@ -811,11 +835,11 @@ In conversational commerce, speed IS your sales rep's charisma.
 What is the maximum latency you tolerate in your AI applications?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Speedometer / Latency Metric Graphic
-* **Design / Canva Text:** "WhatsApp Conversion vs. Response Latency: The 3-Second Golden Window".
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A sleek glowing neon stopwatch showing 01.8 seconds with emerald green numerals, floating above a sleek smartphone showing fast message delivery ticks, clean dark aesthetic, 8k resolution --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Futuristic High-Precision Latency Dial & Ticks.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A glowing futuristic stopwatch interface rendered in dark glassmorphism. The display shows '1.82s' in bold luminous emerald green numerals. Behind it, a smartphone screen displays incoming and outgoing WhatsApp chat bubbles with two emerald double checkmarks delivering instantaneously. Clean dark aesthetic, ray-traced reflections, 8k resolution --ar 16:9`
+* **Canva Overlay Guide:** Headline: "THE SUB-2-SECOND SLA: Why Latency Dictates Conversational Conversion Rates".
 * **First Comment Copy:**
   > *"When an ad click receives an intelligent, personalized answer in under 2 seconds, the customer's brain interprets the business as world-class and trustworthy."*
 
@@ -855,11 +879,11 @@ Ship once, run everywhere.
 How do you tackle multi-platform SaaS integrations?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Architectural Diagram
-* **Design / Canva Text:** Central Embed Core connecting to Shopify Admin and WooCommerce wp-admin simultaneously with "100% Feature Parity".
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A clean conceptual 3D graphic showing a glowing central application dashboard component smoothly slotting into two distinct platform frames (one representing Shopify green, one WordPress blue), minimalist tech aesthetic, 8k --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Unified Core & Multi-Host Architecture Diagram.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A clean 3D isometric representation of a unified software module. In the center, a luminous Next.js core application card glowing with emerald light. Symmetrical glowing fiber-optic branches plug smoothly into two host frames: a green Shopify admin container on the left, and a blue WooCommerce wp-admin container on the right. A badge at the top reads '100% Feature Parity - Zero Code Duplication'. Dark minimal aesthetic, 8k --ar 16:9`
+* **Canva Overlay Guide:** Top title: "THE SHARED-EMBED ARCHITECTURE: Unified In-Store UI for Shopify & WooCommerce".
 * **First Comment Copy:**
   > *"By using the URL fragment (#) rather than query parameters (?) to pass short-lived session tokens to the iframe, the token is never logged in server access logs or browser history."*
 
@@ -903,11 +927,11 @@ The best media buyers aren't just traffic generators. They are conversion funnel
 What’s your current average ROAS on cold traffic?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Comparison Funnel Graphic
-* **Design / Canva Text:** "Traditional Web Funnel (1.8x ROAS)" vs "Conversational WhatsApp Funnel (3.4x ROAS)".
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *An eye-catching 3D infographic showing an ad funnel. A stream of social media ad clicks flowing into a high-converting glowing funnel with gold coins and confirmed green order checkmarks pouring out of the bottom, dark background, emerald and gold lighting --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Marketing Funnel Comparison & Multiplied ROAS Graphic.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A modern split funnel graphic on a dark slate background. Left funnel represents 'Traditional Web Store': a wide top funnel leaking red drops with a low outcome badge '1.8x ROAS'. Right funnel represents 'Click-to-WhatsApp Conversational Funnel': tight, glowing emerald channel where clicks convert directly into stacks of gold coins and green verified delivery boxes with a bright badge '3.6x ROAS'. Sleek fintech aesthetic, volumetric studio lighting, 8k --ar 16:9`
+* **Canva Overlay Guide:** Headline: "DOUBLING MEDIA BUYER ROAS: Why Post-Click WhatsApp Funnels Beat Website Carts".
 * **First Comment Copy:**
   > *"If you want to scale ad spend profitably in 2026, stop treating the ad click as the end of your job. The conversation after the click is where the profit is made."*
 
@@ -946,17 +970,24 @@ We’re launching the platform and opening up **10 exclusive pilot spots** for h
 Turn your notifications on. Tomorrow changes how e-commerce sells on WhatsApp. 🚀
 ```
 
-#### Visual / Image Spec:
-* **Format:** Mysterious High-Production Teaser Graphic
-* **Design / Canva Text:** Sleek silhouette of the platform UI with the text: "TOMORROW. The Next Generation of Conversational Commerce. 9:00 AM PKT."
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *Dramatic teaser image. A sleek modern device shrouded in subtle dark smoke and illuminated by an ethereal emerald green edge light (#10b981). High tech, minimalist, mysterious, cinematic lighting, ultra-high resolution --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Cinematic Teaser & Silhouette of the Platform.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A dramatic cinematic teaser graphic. An ultra-modern laptop and smartphone silhouette emerging from subtle dark atmospheric smoke, edge-lit with a vibrant neon emerald halo (#10B981). Floating in the center above the hardware is a glowing holographic countdown text 'TOMORROW 9:00 AM PKT'. Dark obsidian environment, luxury tech launch aesthetic, hyper-detailed, 8k resolution --ar 16:9`
+* **Canva Overlay Guide:** Add bold minimalist typography: "THE VEIL DROPS TOMORROW. 9:00 AM PKT. The Next Generation of Conversational Commerce."
 * **First Comment Copy:**
   > *"Drop a comment below with '🚀' if you want early access before the public reveal tomorrow morning."*
 
 ---
 
 # Phase 4: The Grand Reveal & Botaura Beta Launch (Days 21–30)
+
+> [!IMPORTANT]
+> **Branding Directive for Days 21–30:**  
+> All visuals in this phase must feature the official **Botaura** brand assets:  
+> - Primary Logo: [`botaura-logo.png`](file:///c:/Work/botaura-claude-kiro/frontend/public/images/botaura-logo.png)  
+> - 3D Mascot: [`botaura-robot.png`](file:///c:/Work/botaura-claude-kiro/frontend/public/images/botaura-robot.png)  
+> - Emerald Green Accent: `#10B981`
 
 ---
 
@@ -1000,11 +1031,14 @@ Turn your WhatsApp traffic into paid cash-on-delivery orders.
 Check out the demo link in the first comment and let me know what you think! 👇
 ```
 
-#### Visual / Image Spec:
-* **Format:** Hero Product Launch Graphic / Carousel of Feature Highlights
-* **Design / Canva Text:** "MEET BOTAURA. Autonomous AI Sales & WhatsApp Commerce for High-Growth E-Commerce Brands." Featuring the emerald green dashboard and mobile WhatsApp Flow interface.
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *Hero SaaS product launch mockup. An ultra-modern laptop displaying the Botaura analytics dashboard with glowing emerald green accents, floating beside a sleek smartphone showing an active WhatsApp AI sales conversation and COD checkout form. Premium 3D render, dark luxury studio lighting, 8k --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Hero Product Launch Stage with Official Logo & Mascot.
+* **Reference Assets to Provide:** 
+  1. Logo: `frontend/public/images/botaura-logo.png`
+  2. Mascot: `frontend/public/images/botaura-robot.png`
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A flagship 3D SaaS product reveal stage. A sleek modern laptop on an elevated dark pedestal displaying the Botaura analytics dashboard with glowing emerald graphs (#10B981). Hovering beside the laptop is the friendly 3D white robot mascot with glowing green eyes and a customer support headset (matching Botaura robot branding). Floating in the center is an iPhone displaying an interactive WhatsApp chat with product cards and COD checkout. In the top-left background, subtle illuminated typography reads 'BOTAURA'. Ultra-luxurious dark tech studio lighting, ray-traced reflections, 8k resolution --ar 16:9 --style raw`
+* **Canva Overlay Guide:** Top left: Place the transparent [`botaura-logo.png`](file:///c:/Work/botaura-claude-kiro/frontend/public/images/botaura-logo.png). Sub-headline: "Autonomous AI Sales & WhatsApp Commerce Platform".
 * **First Comment Copy:**
   > *"Explore the live platform and test the interactive demo here: 👉 https://botaura.app (Or scan the QR code in our bio to chat with the AI live on WhatsApp right now!)"*
 
@@ -1039,11 +1073,12 @@ Watch the full 45-second screen recording in the video below.
 How does your current WhatsApp checkout flow compare?
 ```
 
-#### Visual / Image Spec:
-* **Format:** 45-Second Screen-Recording Video (or Animated GIF)
-* **Video Content:** Clean split screen: Left side shows user chatting on WhatsApp, selecting product, opening native Flow, and placing order. Right side shows the Shopify/WooCommerce order dashboard refreshing and showing the new order in real-time.
-* **Thumbnail Prompt:**
-  > *YouTube-style clean tech thumbnail. Bold text: '15-SECOND WHATSAPP CHECKOUT'. Clean split screen preview with an emerald WhatsApp icon and Shopify order confirmed badge, high contrast, 4k --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** 45-Second Screen-Recording Video or High-Impact Thumbnail.
+* **Reference Assets to Provide:** Logo watermark: `botaura-logo.png` on the top corner.
+* **Detailed AI Generation Prompt (for Video Thumbnail):**
+  > `A bold YouTube/LinkedIn video thumbnail. Clean split-screen mockup: Left side shows a smartphone with an open WhatsApp Flow checkout form and an emerald 'Order Now' button. Right side shows a laptop screen with a green 'Order #1042 Confirmed' badge appearing in real-time. In the top corner, the crisp green Botaura logo. Bold 3D typography across the center: '15-SECOND CHECKOUT'. High contrast, studio lighting, 8k --ar 16:9`
+* **Canva Overlay Guide:** Add large text: "WATCH: 15-SECOND WHATSAPP CHECKOUT (No External Links)". Drop Botaura logo top left.
 * **First Comment Copy:**
   > *"Want to test this exact flow on your own phone? Message our live demo WhatsApp number here: [Demo Link]. Type 'Hi' and pick any product!"*
 
@@ -1079,11 +1114,12 @@ They want an attentive, polite salesman who understands them.
 What’s the toughest question customers ask your sales team on WhatsApp?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Carousel of Real WhatsApp Conversation Screenshots
-* **Design / Canva Text:** 3 slides showing authentic, clean WhatsApp screenshots with high-contrast emerald checkmarks highlighting the AI's polite, accurate replies.
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *High resolution close-up shot of a smartphone screen displaying authentic WhatsApp chat bubbles in Roman Urdu, sharp text readability, soft ambient lighting, clean modern aesthetic --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Real UI Chat Carousel or High-Resolution Macro Photography.
+* **Reference Assets to Provide:** `botaura-robot.png` as the chat profile avatar.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A clean macro photograph of an iPhone 15 Pro held in hand, displaying an authentic WhatsApp chat conversation in Roman Urdu. The chat header shows the Botaura 3D robot avatar with a green verified checkmark. Chat bubbles are crisp and sharp with authentic timestamps. The AI reply includes an elegant attached product photo card with emerald buttons. Soft atmospheric bokeh in the background, commercial photography lighting, 8k --ar 16:9`
+* **Canva Overlay Guide:** Banner at the bottom: "TESTED ON 100,000+ REAL ROMAN URDU CONVERSATIONS | Botaura AI".
 * **First Comment Copy:**
   > *"Language intelligence is more than translation—it's cultural context. Botaura is trained on millions of conversational e-commerce patterns across South Asia."*
 
@@ -1122,11 +1158,12 @@ Botaura didn't cost them money. It literally made them money.
 Calculate your store's RTO savings using our free calculator in the first comment! 👇
 ```
 
-#### Visual / Image Spec:
-* **Format:** Case Study Result Card / Infographic
-* **Design / Canva Text:** Big bold stats: "RTO: 28% → 17%". "Courier Fees Saved: Rs. 154,000". "Setup Time: 10 Minutes".
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A professional B2B case study graphic card with modern dark slate background, glowing green financial growth and cost-saving metrics (+Rs 154,000 Saved), clean corporate e-commerce styling --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Executive B2B Case Study Metric Card with Botaura Branding.
+* **Reference Assets to Provide:** `botaura-logo.png` on top right.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `An executive B2B case study result card rendered in glassmorphism on a deep slate background (#090D16). Three large metrics displayed in glowing emerald typography: 'RTO Rate: 28% → 17%', 'Courier Fees Saved: Rs 154,000+', and 'Unshipped Dead Orders: 78'. A subtle holographic 3D courier parcel with an emerald checkmark sits beside the card. Elegant corporate tech design, clean typography, 8k --ar 16:9`
+* **Canva Overlay Guide:** Top header: "CASE STUDY: HOW BOTAURA ANTI-RTO SAVED RS. 154,000 IN 30 DAYS". Drop Botaura logo top right.
 * **First Comment Copy:**
   > *"Curious how much your brand is losing every month to unverified COD orders? Check our free RTO Loss Calculator here: https://botaura.app/rto-calculator"*
 
@@ -1169,14 +1206,12 @@ You install the app, and your store has a 24/7 autonomous sales rep ready to clo
 Ready to see how it looks inside your admin dashboard?
 ```
 
-#### Visual / Image Spec:
-* **Format:** 3-Step Setup Infographic
-* **Design / Canva Text:** 
-  "Step 1: Install Plugin (1 min)" → 
-  "Step 2: Connect WhatsApp (3 mins)" → 
-  "Step 3: AI Starts Selling (Instant)".
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A clean, minimalist 3D isometric illustration of a digital storefront connecting via glowing emerald cables to WordPress and Shopify logos, symbolizing instant seamless integration, dark mode tech aesthetic --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** 3-Step Setup Infographic with Platform Logos.
+* **Reference Assets to Provide:** `botaura-logo.png` as the central hub.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A clean 3D isometric infographic showing a 3-step setup process. Step 1: 3D Shopify and WooCommerce icons with text '1-Click Connect'. Step 2: Glowing WhatsApp icon with text 'Connect Official API'. Step 3: The 3D Botaura robot mascot celebrating with text 'AI Ready to Sell'. A sleek emerald progress line connects all three steps with a label 'Completed in 9 Minutes'. Dark obsidian background, Apple keynote design aesthetic, 8k --ar 16:9`
+* **Canva Overlay Guide:** Top title: "ZERO CODING REQUIRED: Connect Botaura to Your Store in Under 10 Minutes".
 * **First Comment Copy:**
   > *"Full step-by-step documentation and installation guides for both platforms are available at: https://botaura.app/docs"*
 
@@ -1215,11 +1250,12 @@ Better customer experience. Higher conversion. Fraction of the cost.
 Which model makes more financial sense for your business?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Cost Comparison Table Graphic
-* **Design / Canva Text:** Side-by-Side Table: "Human Support Team (~Rs. 175k/mo, 40m latency, Sleeps at night)" vs "Botaura AI (Fraction of cost, 2s latency, 24/7)".
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A modern financial comparison chart rendered in an ultra-clean UI card. Emerald green metrics showing cost reduction (-70%) and efficiency gains (+400%), premium dark glassmorphism design, 8k --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Financial Unit Economics Comparison Table with Botaura Branding.
+* **Reference Assets to Provide:** `botaura-logo.png` on the right card.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A clean, modern financial comparison table rendered on a dark slate background. Left side: A dim grey card titled 'Human Support Team (3 Reps)' showing high monthly burn 'Rs 175,000/mo', '42m Latency', 'Sleeps at Night'. Right side: An elevated glowing emerald card titled 'Botaura Autonomous Platform' with the Botaura logo, showing '70% Cost Reduction', '2-Second Latency', '24/7/365 Active'. Luxury financial UI, clean typography, 8k --ar 16:9`
+* **Canva Overlay Guide:** Top title: "THE UNIT ECONOMICS OF WHATSAPP COMMERCE: Human Support Payroll vs. Botaura AI".
 * **First Comment Copy:**
   > *"Software doesn't call in sick on Sunday night when your highest-ROI Facebook ad is scaling. Give your brand 24/7 sales superpowers."*
 
@@ -1255,11 +1291,12 @@ Give your agency an unfair competitive advantage.
 DM me "AGENCY" or comment below, and I'll send you the partner deck! 🚀
 ```
 
-#### Visual / Image Spec:
-* **Format:** Agency Partner Announcement Banner
-* **Design / Canva Text:** "BOTAURA FOR AGENCIES: Double Your Clients' CTWA ROAS. Manage all clients in one unified dashboard. 20% Recurring Rev-Share."
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A sleek B2B partnership graphic. Two stylized geometric handshake silhouettes glowing in emerald green neon against a sophisticated dark hexagonal grid pattern, modern corporate agency aesthetic --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Agency B2B Partnership Banner with Multi-Store Dashboard Mockup.
+* **Reference Assets to Provide:** `botaura-logo.png` prominently displayed.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `A high-end B2B agency announcement graphic. A futuristic multi-screen workspace: a large central monitor displays the Botaura Agency Dashboard with multiple client stores ('Brand A', 'Brand B', 'Brand C') each showing green active ROAS indicators (+220%). Floating geometric badges in emerald neon read '20% Lifetime Rev-Share' and 'Official Agency Partner'. Sleek obsidian environment, executive corporate agency styling, 8k --ar 16:9`
+* **Canva Overlay Guide:** Top banner: "BOTAURA FOR AGENCIES: Double Your Clients' ROAS & Earn 20% Recurring Revenue".
 * **First Comment Copy:**
   > *"Media buyers who integrate conversational checkout are seeing client retention jump from 3 months to 12+ months. Learn more here: https://botaura.app/partners"*
 
@@ -1301,11 +1338,12 @@ Engineering is never done. We're tuning the engine every single day.
 What's the hardest edge case you've encountered in real-time messaging systems?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Production Metrics Dashboard Screenshot
-* **Design / Canva Text:** Clean UI card showing metrics: "48,290 Messages", "1.84s Avg Latency", "318 Orders Closed", "99.9% Uptime".
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *High-tech observability dashboard showing real-time production analytics. Clean emerald green and white graphs, latency histograms, and uptime badges on a dark slate glassmorphism interface, 8k --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Real-Time Production Health & Observability Interface.
+* **Reference Assets to Provide:** Botaura logo and brand colors (`#10B981`).
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `An ultra-clean production metrics dashboard card rendered in dark glassmorphism. Four glowing metric tiles: '48,290 Inbound Messages', '1.84s Response Latency', '318 WhatsApp Flow Orders', '99.99% Uptime'. Subtle neon emerald bar charts and activity heatmaps. The Botaura logo sits cleanly in the header with a green pulsating 'Systems Operational' status dot. High-tech Datadog/Grafana aesthetic, 8k resolution --ar 16:9`
+* **Canva Overlay Guide:** Top title: "WEEK 1 PRODUCTION REPORT: 48,000+ Messages & Sub-2s Latency at Scale".
 * **First Comment Copy:**
   > *"Debouncing multi-message bursts at the ingestion layer is the difference between an annoying repetitive bot and a truly human-like conversation."*
 
@@ -1346,11 +1384,14 @@ Only 10 spots available for this cohort so our engineering team can personally h
 Comment **"PILOT"** below or send me a DM to claim your brand's spot before they fill up! 🚀
 ```
 
-#### Visual / Image Spec:
-* **Format:** High-Converting Promotional Card
-* **Design / Canva Text:** "14-DAY RISK-FREE PILOT. 10 D2C Brands Only. 24/7 AI Sales Agent + WhatsApp Flows Checkout + Anti-RTO Shield. White-Glove Setup Included."
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *A sleek VIP invitation card floating in 3D space with glowing emerald green edges (#10b981) and metallic dark slate surface. Text reads 'EXCLUSIVE ACCESS: PILOT COHORT'. Premium executive aesthetic, cinematic lighting, 8k --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** VIP Black-Card Style Promotional Offer with 3D Mascot.
+* **Reference Assets to Provide:** 
+  1. Logo: `botaura-logo.png`
+  2. Mascot: `botaura-robot.png`
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `An exclusive VIP invitation card floating in 3D dark luxury space. The card is crafted from brushed black obsidian with luminous emerald-green beveled edges (#10B981). Embossed in metallic chrome typography: '14-DAY RISK-FREE PILOT | 10 D2C BRANDS ONLY'. Beside the card, the friendly 3D white Botaura robot mascot points towards the card with a welcoming gesture. Floating badges: '24/7 AI Sales Agent', 'WhatsApp Flows COD Checkout', 'White-Glove Setup Included'. Premium executive lighting, 8k --ar 16:9`
+* **Canva Overlay Guide:** Bold headline: "EXCLUSIVE LAUNCH COHORT: 14-Day 100% Free Pilot for High-Growth D2C Brands". Drop Botaura logo at top center.
 * **First Comment Copy:**
   > *"You can also apply directly via our pilot form here: https://botaura.app/pilot (First come, first served. 4 spots already claimed by our early waitlist!)"*
 
@@ -1386,23 +1427,11 @@ The era of conversational commerce is here. 🚀
 What feature are you most excited to see in the future of AI shopping?
 ```
 
-#### Visual / Image Spec:
-* **Format:** Visionary Infographic / Roadmap Concept
-* **Design / Canva Text:** "THE ROADMAP OF CONVERSATIONAL COMMERCE: 1. Instant Text RAG (Today) → 2. Voice Note AI (Next) → 3. Autonomous Logistics & Predictive Repurchase (2026-2027)."
-* **AI Image Prompt (Midjourney / Ideogram):**
-  > *An inspiring futuristic vision of digital commerce. A person holding a smartphone radiating gentle emerald light, with ethereal holographic product cards, delivery drones, and glowing data nodes floating harmoniously around it. Cinematic, hopeful, cutting-edge technology aesthetic, 8k resolution --ar 16:9*
+#### Visual Specification & AI Prompt:
+* **Visual Type:** Visionary Futuristic Landscape of E-Commerce.
+* **Reference Assets to Provide:** `botaura-logo.png` glowing in the center of the horizon.
+* **Detailed AI Generation Prompt (Ideogram 2.0 / Midjourney v6):**
+  > `An inspiring, futuristic vision of digital commerce in emerging markets. A customer holding an illuminated smartphone that projects friendly holographic product cards and voice-frequency soundwaves in emerald green light. Above in the twilight sky, friendly autonomous logistics drones navigate a modern glowing cityscape. In the center horizon, a sleek holographic emblem of Botaura shines proudly. Cinematic, optimistic, ultra-detailed, 8k resolution --ar 16:9`
+* **Canva Overlay Guide:** Top title: "THE FUTURE OF COMMERCE IS CONVERSATIONAL | The Journey With Botaura Begins".
 * **First Comment Copy:**
   > *"Thank you for being part of this 30-day journey! To connect your store or join our journey, visit https://botaura.app or reach out to me directly."*
-
----
-
-## 🛠️ Execution Checklist for Maximum Success
-
-1. **Asset Preparation:**
-   - Run the Midjourney / DALL-E prompts for Days 1, 8, 11, 21, and 29.
-   - For technical days (Days 8, 11, 12, 18), export the included Mermaid diagrams or use [excalidraw.com](https://excalidraw.com) for clean developer-style graphics.
-2. **First-Hour Engagement:**
-   - After publishing each morning at 8:30 AM – 9:30 AM PKT, immediately paste the **First Comment**.
-   - Reply to every comment within the first 60 minutes to trigger LinkedIn’s viral distribution algorithm.
-3. **Tracking DMs:**
-   - Keep a spreadsheet of everyone who comments "PILOT", "AGENCY", or asks questions to convert them directly into pilot users.
