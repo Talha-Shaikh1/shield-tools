@@ -1,0 +1,163 @@
+const fs = require('fs');
+const path = require('path');
+const sharp = require('sharp');
+
+// VIP SVG Logo Design (512x512)
+const svgIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Outer Glow Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="40%" stop-color="#2563eb" />
+      <stop offset="80%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+
+    <!-- Left Shield Facet -->
+    <linearGradient id="shieldLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <!-- Right Shield Facet -->
+    <linearGradient id="shieldRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+
+    <!-- Inner Core Shield -->
+    <linearGradient id="shieldCore" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Metallic Lock Gradient -->
+    <linearGradient id="lockGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base App Squircle -->
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#bgGrad)" />
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="none" stroke="url(#borderGrad)" stroke-width="8" opacity="0.9" />
+
+  <!-- Ambient Glow Behind Shield -->
+  <circle cx="256" cy="240" r="140" fill="#2563eb" opacity="0.25" filter="url(#glow)" />
+  <circle cx="256" cy="270" r="100" fill="#10b981" opacity="0.22" filter="url(#glow)" />
+
+  <!-- Decorative High-Tech Circuit Corner Dots -->
+  <circle cx="64" cy="64" r="5" fill="#38bdf8" opacity="0.6" />
+  <circle cx="448" cy="64" r="5" fill="#34d399" opacity="0.6" />
+  <circle cx="64" cy="448" r="5" fill="#2563eb" opacity="0.6" />
+  <circle cx="448" cy="448" r="5" fill="#10b981" opacity="0.6" />
+
+  <!-- MAIN 3D SHIELD -->
+  <g transform="translate(0, -6)">
+    <!-- Outer Shield Halo / Shadow -->
+    <path d="M 256 92 L 372 136 C 372 260 256 352 256 376 C 256 352 140 260 140 136 Z" 
+          fill="#1e293b" opacity="0.4" transform="translate(0, 10)" />
+
+    <!-- Left Shield Wing -->
+    <path d="M 256 88 L 144 132 C 144 260 256 352 256 376 Z" 
+          fill="url(#shieldLeft)" />
+
+    <!-- Right Shield Wing -->
+    <path d="M 256 88 L 368 132 C 368 260 256 352 256 376 Z" 
+          fill="url(#shieldRight)" />
+
+    <!-- Center Crest Spine Highlight -->
+    <path d="M 256 88 L 256 376" stroke="#ffffff" stroke-width="3" opacity="0.7" />
+
+    <!-- Inner Protective Core (Recessed Obsidian Shield) -->
+    <path d="M 256 128 L 336 160 C 336 248 256 316 256 336 C 256 316 176 248 176 160 Z" 
+          fill="url(#shieldCore)" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+
+    <!-- High-Tech Energy Grid Lines inside core -->
+    <path d="M 216 195 L 296 195" stroke="#38bdf8" stroke-width="2" opacity="0.4" />
+    <path d="M 226 230 L 286 230" stroke="#34d399" stroke-width="2" opacity="0.4" />
+    <path d="M 236 265 L 276 265" stroke="#38bdf8" stroke-width="2" opacity="0.4" />
+
+    <!-- SECURITY LOCK BADGE (Centerpiece) -->
+    <!-- Lock Shackle -->
+    <path d="M 234 216 L 234 196 C 234 182 244 172 256 172 C 268 172 278 182 278 196 L 278 216" 
+          fill="none" stroke="url(#lockGold)" stroke-width="9" stroke-linecap="round" />
+    <!-- Lock Body -->
+    <rect x="220" y="214" width="72" height="60" rx="14" fill="url(#lockGold)" filter="url(#glow)" />
+    <!-- Keyhole Inner -->
+    <circle cx="256" cy="238" r="6" fill="#0f172a" />
+    <path d="M 253 238 L 259 238 L 261 254 L 251 254 Z" fill="#0f172a" />
+  </g>
+
+  <!-- Bottom Brand Pill -->
+  <g transform="translate(156, 420)">
+    <rect width="200" height="34" rx="17" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+    <text x="100" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-size="14" font-weight="900" letter-spacing="2" fill="#f8fafc" text-anchor="middle">
+      SHIELDTOOLS
+    </text>
+  </g>
+
+  <!-- VIP Sparkle Accent -->
+  <path d="M 390 100 Q 390 120 410 120 Q 390 120 390 140 Q 390 120 370 120 Q 390 120 390 100 Z" fill="#38bdf8" />
+  <path d="M 120 380 Q 120 395 135 395 Q 120 395 120 410 Q 120 395 105 395 Q 120 395 120 380 Z" fill="#34d399" />
+</svg>`;
+
+async function run() {
+  const publicDir = path.join(__dirname, '../public');
+  
+  // 1. Save VIP SVG Icon
+  const svgPath = path.join(publicDir, 'icon.svg');
+  fs.writeFileSync(svgPath, svgIcon, 'utf8');
+  console.log('Saved public/icon.svg');
+
+  // 2. Generate 512x512 PNG
+  const png512Path = path.join(publicDir, 'icon-512.png');
+  await sharp(Buffer.from(svgIcon))
+    .resize(512, 512)
+    .png({ quality: 100 })
+    .toFile(png512Path);
+  console.log('Generated public/icon-512.png (512x512)');
+
+  // 3. Generate 192x192 PNG
+  const png192Path = path.join(publicDir, 'icon-192.png');
+  await sharp(Buffer.from(svgIcon))
+    .resize(192, 192)
+    .png({ quality: 100 })
+    .toFile(png192Path);
+  console.log('Generated public/icon-192.png (192x192)');
+
+  // 4. Generate Apple Touch Icon 180x180
+  const appleIconPath = path.join(publicDir, 'apple-touch-icon.png');
+  await sharp(Buffer.from(svgIcon))
+    .resize(180, 180)
+    .png({ quality: 100 })
+    .toFile(appleIconPath);
+  console.log('Generated public/apple-touch-icon.png (180x180)');
+
+  // 5. Generate favicon 64x64 PNG & replace favicon.ico
+  const faviconPath = path.join(publicDir, 'favicon.ico');
+  await sharp(Buffer.from(svgIcon))
+    .resize(64, 64)
+    .png()
+    .toFile(faviconPath);
+  console.log('Updated public/favicon.ico');
+}
+
+run().catch(console.error);
