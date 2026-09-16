@@ -14,6 +14,7 @@ import {
   Menu,
   X,
   Sparkles,
+  BookOpen,
 } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import { EmbedModal } from "./EmbedModal";
@@ -40,6 +41,12 @@ export const Navbar: React.FC = () => {
       href: "/ecomshield",
       icon: Calculator,
       badge: "COD Proof",
+    },
+    {
+      name: "Blog & Guides",
+      href: "/blog",
+      icon: BookOpen,
+      badge: "AEO/SEO",
     },
   ];
 

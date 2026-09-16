@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
                   href="/docshield"
                   className="text-slate-500 transition hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400"
                 >
-                  DocShield™ CNIC & ID Watermark Studio
+                  DocShield™ Watermark Studio
                 </Link>
               </li>
               <li>
@@ -61,7 +61,7 @@ export const Footer: React.FC = () => {
                   href="/ecomshield"
                   className="text-slate-500 transition hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400"
                 >
-                  EcomShield™ Net Profit & RTO Loss Calculator
+                  EcomShield™ Profit Calculator
                 </Link>
               </li>
               <li>
@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
                   href="/embed/watermark"
                   className="text-slate-500 transition hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400"
                 >
-                  Standalone Watermark Widget
+                  Watermark Embed Widget
                 </Link>
               </li>
               <li>
@@ -77,18 +77,26 @@ export const Footer: React.FC = () => {
                   href="/embed/ecom-calculator"
                   className="text-slate-500 transition hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400"
                 >
-                  Standalone E-Commerce Widget
+                  Ecom Calculator Widget
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Compliance & Legal */}
+          {/* Guides & Compliance */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">
-              Trust & Legal
+              Research & Legal
             </h4>
             <ul className="mt-3 space-y-2 text-xs">
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-slate-500 font-semibold transition hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400"
+                >
+                  Blog & AEO Guides
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/about"
