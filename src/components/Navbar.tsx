@@ -36,19 +36,16 @@ export const Navbar: React.FC = () => {
       name: "DocShield (ID Watermark)",
       href: "/docshield",
       icon: FileCheck2,
-      badge: "Zero-Upload",
     },
     {
       name: "EcomShield (RTO Calculator)",
       href: "/ecomshield",
       icon: Calculator,
-      badge: "COD Proof",
     },
     {
       name: "Blog & Guides",
       href: "/blog",
       icon: BookOpen,
-      badge: "AEO/SEO",
     },
   ];
 
@@ -91,11 +88,6 @@ export const Navbar: React.FC = () => {
                 >
                   <Icon className="h-4 w-4" />
                   <span>{item.name}</span>
-                  {item.badge && (
-                    <span className="rounded-full bg-slate-200/80 px-2 py-0.5 text-[10px] font-bold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
-                      {item.badge}
-                    </span>
-                  )}
                 </Link>
               );
             })}
@@ -115,24 +107,43 @@ export const Navbar: React.FC = () => {
               <span>&lt;/&gt; Embed</span>
             </button>
 
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              aria-label="Toggle dark/light mode"
-              className="flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 shadow-sm transition hover:bg-slate-50 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
-            >
-              {resolvedTheme === "dark" ? (
-                <Sun className="h-4 w-4 text-amber-400" />
-              ) : (
-                <Moon className="h-4 w-4 text-slate-600" />
-              )}
-            </button>
+            {/* Dual Mode Switcher (Dark / Light) */}
+            <div className="flex items-center rounded-xl border border-slate-200 bg-slate-100/90 p-0.5 dark:border-slate-800 dark:bg-slate-900">
+              <button
+                type="button"
+                onClick={() => setTheme("light")}
+                className={`flex items-center gap-1 rounded-lg px-2.5 py-1 text-xs font-bold transition ${
+                  resolvedTheme === "light"
+                    ? "bg-white text-amber-600 shadow-sm"
+                    : "text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+                }`}
+                title="Light Mode"
+              >
+                <Sun className="h-3.5 w-3.5" />
+                <span className="text-[11px]">Light</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setTheme("dark")}
+                className={`flex items-center gap-1 rounded-lg px-2.5 py-1 text-xs font-bold transition ${
+                  resolvedTheme === "dark"
+                    ? "bg-slate-800 text-blue-400 shadow-sm"
+                    : "text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+                }`}
+                title="Dark Mode"
+              >
+                <Moon className="h-3.5 w-3.5" />
+                <span className="text-[11px]">Dark</span>
+              </button>
+            </div>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Actions */}
           <div className="flex items-center gap-2 md:hidden">
+            {/* Mobile Dual Mode Toggle */}
             <button
               onClick={toggleTheme}
+              aria-label="Toggle dual mode"
               className="flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300"
             >
               {resolvedTheme === "dark" ? (
@@ -172,11 +183,6 @@ export const Navbar: React.FC = () => {
                       <Icon className="h-4 w-4" />
                       <span>{item.name}</span>
                     </div>
-                    {item.badge && (
-                      <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600 dark:bg-slate-800 dark:text-slate-300">
-                        {item.badge}
-                      </span>
-                    )}
                   </Link>
                 );
               })}

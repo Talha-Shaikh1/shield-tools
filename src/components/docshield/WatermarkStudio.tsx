@@ -267,7 +267,7 @@ export const WatermarkStudio: React.FC = () => {
                 }`}
               >
                 <Layers className="h-4 w-4" />
-                <span>Front & Back (Dual ID)</span>
+                <span>Dual Mode (Front + Back)</span>
               </button>
               <button
                 type="button"
