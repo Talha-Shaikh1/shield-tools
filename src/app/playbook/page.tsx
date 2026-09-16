@@ -131,7 +131,7 @@ export default function PlaybookPrivatePage() {
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-lg sm:text-xl font-black tracking-tight text-white">
-                BOTAURA — 30-Day LinkedIn Content Playbook
+                BOTAURA — 30-Day Launch & Authority Playbook
               </h1>
               <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/20 px-2.5 py-0.5 text-[10px] font-bold text-emerald-300">
                 <Lock className="h-3 w-3" /> Private Hub
