@@ -111,6 +111,13 @@ export default function RootLayout({
     >
       <head>
         <JsonLd />
+        {/* Monetag Multitag Profitable Tag */}
+        <script
+          src="https://quge5.com/88/tag.min.js"
+          data-zone="282784"
+          async
+          data-cfasync="false"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('shieldtools_theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}window.__pwaPrompt=null;window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();window.__pwaPrompt=e;window.dispatchEvent(new CustomEvent('pwa-ready'))});if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}})()`,
