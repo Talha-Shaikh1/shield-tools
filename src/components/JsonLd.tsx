@@ -6,12 +6,12 @@ export const JsonLd: React.FC = () => {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://shield-tools.vercel.app/#organization",
+        "@id": "https://tools.talhaweb.xyz/#organization",
         "name": "ShieldTools",
-        "url": "https://shield-tools.vercel.app",
+        "url": "https://tools.talhaweb.xyz",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://shield-tools.vercel.app/icon-512.png",
+          "url": "https://tools.talhaweb.xyz/icon-512.png",
           "width": 512,
           "height": 512,
         },
@@ -21,11 +21,11 @@ export const JsonLd: React.FC = () => {
       },
       {
         "@type": "WebSite",
-        "@id": "https://shield-tools.vercel.app/#website",
-        "url": "https://shield-tools.vercel.app",
+        "@id": "https://tools.talhaweb.xyz/#website",
+        "url": "https://tools.talhaweb.xyz",
         "name": "ShieldTools",
         "publisher": {
-          "@id": "https://shield-tools.vercel.app/#organization",
+          "@id": "https://tools.talhaweb.xyz/#organization",
         },
         "description":
           "Free, 100% in-browser identity document watermark studio and COD return loss calculator.",
@@ -42,7 +42,7 @@ export const JsonLd: React.FC = () => {
         },
         "description":
           "100% Client-Side National ID and CNIC watermarking studio. Stamping happens in browser RAM with zero server file uploads.",
-        "url": "https://shield-tools.vercel.app/docshield",
+        "url": "https://tools.talhaweb.xyz/docshield",
       },
       {
         "@type": "SoftwareApplication",
@@ -56,11 +56,11 @@ export const JsonLd: React.FC = () => {
         },
         "description":
           "Real e-commerce net profit and RTO return loss calculator modeling courier penalties and wasted ad spend.",
-        "url": "https://shield-tools.vercel.app/ecomshield",
+        "url": "https://tools.talhaweb.xyz/ecomshield",
       },
       {
         "@type": "FAQPage",
-        "@id": "https://shield-tools.vercel.app/#faq",
+        "@id": "https://tools.talhaweb.xyz/#faq",
         "mainEntity": [
           {
             "@type": "Question",

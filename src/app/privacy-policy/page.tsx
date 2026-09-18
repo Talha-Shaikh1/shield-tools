@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
             <span>Core Privacy Axiom: Zero Server-Side File Retention</span>
           </div>
           <p className="mt-1 text-xs text-emerald-800 dark:text-emerald-300">
-            ShieldTools (operating at shield-tools.vercel.app) does not collect, transmit, store, or view any image, national ID card, passport, document, or financial parameter you input into our tools. All processing happens entirely within your web browser using HTML5 client-side memory.
+            ShieldTools (operating at tools.talhaweb.xyz) does not collect, transmit, store, or view any image, national ID card, passport, document, or financial parameter you input into our tools. All processing happens entirely within your web browser using HTML5 client-side memory.
           </p>
         </div>
 

@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://shield-tools.vercel.app";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tools.talhaweb.xyz";
   const now = new Date().toISOString();
 
   return [

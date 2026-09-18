@@ -239,7 +239,7 @@ export async function exportEcomReportToPdf(
   pdf.setFontSize(8.5);
   pdf.setTextColor(148, 163, 184);
   pdf.text(
-    "Generated free by ShieldTools (https://shield-tools.vercel.app) — Confidential Business Plan",
+    "Generated free by ShieldTools (https://tools.talhaweb.xyz) — Confidential Business Plan",
     36,
     pageWidth > 595 ? 800 : 810
   );
