@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google334c761291d5e373",
+    google: ["google784903a671501d4f", "google334c761291d5e373"],
   },
 };
 
