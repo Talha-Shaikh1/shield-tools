@@ -1,4 +1,12 @@
-// Minimal Service Worker for ShieldTools PWA installation support
+// Monetag Push Notification Service Worker
+self.options = {
+  "domain": "3nbf4.com",
+  "zoneId": 11834501
+};
+self.lary = "";
+importScripts('https://3nbf4.com/act/files/service-worker.min.js?r=sw');
+
+// ShieldTools PWA Service Worker
 const CACHE_NAME = "shieldtools-cache-v1";
 
 self.addEventListener("install", (event) => {
