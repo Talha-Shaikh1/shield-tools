@@ -32,7 +32,7 @@ function EcomCalculatorEmbedContent() {
           </div>
 
           <a
-            href="https://shieldtools.io"
+            href="https://shield-tools.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50/80 px-3 py-1 font-bold text-blue-700 shadow-sm transition hover:bg-blue-100 hover:text-blue-800 dark:border-blue-900/60 dark:bg-blue-950/50 dark:text-blue-300 dark:hover:bg-blue-900/50"

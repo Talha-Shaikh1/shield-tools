@@ -6,12 +6,12 @@ export const JsonLd: React.FC = () => {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://shieldtools.io/#organization",
+        "@id": "https://shield-tools.vercel.app/#organization",
         "name": "ShieldTools",
-        "url": "https://shieldtools.io",
+        "url": "https://shield-tools.vercel.app",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://shieldtools.io/icon-512.png",
+          "url": "https://shield-tools.vercel.app/icon-512.png",
           "width": 512,
           "height": 512,
         },
@@ -21,11 +21,11 @@ export const JsonLd: React.FC = () => {
       },
       {
         "@type": "WebSite",
-        "@id": "https://shieldtools.io/#website",
-        "url": "https://shieldtools.io",
+        "@id": "https://shield-tools.vercel.app/#website",
+        "url": "https://shield-tools.vercel.app",
         "name": "ShieldTools",
         "publisher": {
-          "@id": "https://shieldtools.io/#organization",
+          "@id": "https://shield-tools.vercel.app/#organization",
         },
         "description":
           "Free, 100% in-browser identity document watermark studio and COD return loss calculator.",
@@ -42,7 +42,7 @@ export const JsonLd: React.FC = () => {
         },
         "description":
           "100% Client-Side National ID and CNIC watermarking studio. Stamping happens in browser RAM with zero server file uploads.",
-        "url": "https://shieldtools.io/docshield",
+        "url": "https://shield-tools.vercel.app/docshield",
       },
       {
         "@type": "SoftwareApplication",
@@ -56,11 +56,11 @@ export const JsonLd: React.FC = () => {
         },
         "description":
           "Real e-commerce net profit and RTO return loss calculator modeling courier penalties and wasted ad spend.",
-        "url": "https://shieldtools.io/ecomshield",
+        "url": "https://shield-tools.vercel.app/ecomshield",
       },
       {
         "@type": "FAQPage",
-        "@id": "https://shieldtools.io/#faq",
+        "@id": "https://shield-tools.vercel.app/#faq",
         "mainEntity": [
           {
             "@type": "Question",

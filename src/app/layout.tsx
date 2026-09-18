@@ -22,7 +22,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://shieldtools.io"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://shield-tools.vercel.app"),
   title: {
     default: "ShieldTools — 100% Client-Side ID Watermark Studio & Ecom Profit Calculator",
     template: "%s | ShieldTools",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "breakeven CAC",
     "client-side privacy tools",
   ],
-  authors: [{ name: "ShieldTools Team", url: "https://shieldtools.io" }],
+  authors: [{ name: "ShieldTools Team", url: "https://shield-tools.vercel.app" }],
   creator: "ShieldTools",
   publisher: "ShieldTools",
   manifest: "/manifest.json",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://shieldtools.io",
+    url: "https://shield-tools.vercel.app",
     siteName: "ShieldTools",
     title: "ShieldTools — 100% Client-Side ID Watermark Studio & Ecom Profit Calculator",
     description:
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     images: ["/icon-512.png"],
   },
   alternates: {
-    canonical: "https://shieldtools.io",
+    canonical: "https://shield-tools.vercel.app",
   },
   robots: {
     index: true,

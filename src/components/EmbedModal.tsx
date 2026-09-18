@@ -18,7 +18,7 @@ export const EmbedModal: React.FC<EmbedModalProps> = ({
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [height, setHeight] = useState<number>(defaultTool === "watermark" ? 780 : 720);
   const [copied, setCopied] = useState(false);
-  const [origin, setOrigin] = useState("https://shieldtools.io");
+  const [origin, setOrigin] = useState("https://shield-tools.vercel.app");
 
   useEffect(() => {
     if (typeof window !== "undefined") {

@@ -34,7 +34,7 @@ export default function TermsPage() {
             1. Acceptance of Terms
           </h2>
           <p>
-            By accessing or using the ShieldTools website (shieldtools.io), its standalone embeddable widgets, or related documentation, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the website or its embedded widgets.
+            By accessing or using the ShieldTools website (shield-tools.vercel.app), its standalone embeddable widgets, or related documentation, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the website or its embedded widgets.
           </p>
         </section>
 

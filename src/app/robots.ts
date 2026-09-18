@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/playbook", "/private*"],
       },
     ],
-    sitemap: "https://shieldtools.io/sitemap.xml",
+    sitemap: "https://shield-tools.vercel.app/sitemap.xml",
   };
 }
